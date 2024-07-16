@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1C6EA4; /* темно-синий цвет фона */
+    color: #FFFFFF; /* белый цвет текста */
+    margin: 20px;
+}
+h1 {
+    color: #5592bb; /* светло-синий цвет заголовка */
+}
+.booking-form {
+    background-color: #327cad; /* голубой цвет формы */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.booking-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+.booking-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+.booking-form input[type="submit"] {
+    background-color: #FFFFFF; /* белый цвет кнопки */
+    color: #1C6EA4; /* темно-синий цвет текста кнопки */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.booking-list {
+    background-color: #327cad; /* голубой цвет списка броней */
+    padding: 20px;
+    border-radius: 10px;
+}
+.booking-item {
+    margin-bottom: 10px;
+}
+.booking-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.edit-button {
+    background-color: #FFFFFF; /* белый цвет кнопки */
+    color: #1C6EA4; /* темно-синий цвет текста кнопки */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}

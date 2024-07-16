@@ -1,0 +1,25 @@
+ /* Основные стили для меню */
+.horizontal-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #327cad; /* Цвет фона меню */
+    overflow: hidden; /* Чтобы элементы меню не выходили за границы */
+}
+
+.horizontal-menu li {
+    float: left; /* Размещаем пункты меню в одну строку */
+}
+
+.horizontal-menu li a {
+    display: block;
+    color: #FFFFFF; /* Цвет текста ссылок */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Плавное изменение цвета фона */
+}
+
+.horizontal-menu li a:hover {
+    background-color: #1C6EA4; /* Цвет фона при наведении */
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <listener>
+        <listener-class>ru.kostrikov.gym_booking.listener.HibernateContextListener</listener-class>
+    </listener>
+
+    <filter>
+        <filter-name>CharsetFilter</filter-name>
+        <filter-class>ru.kostrikov.gym_booking.Filter.CharsetFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharsetFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>AuthorizationFilter</filter-name>
+        <filter-class>ru.kostrikov.gym_booking.Filter.AuthorizationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthorizationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>AuthorizationByRolesFilter</filter-name>
+        <filter-class>ru.kostrikov.gym_booking.Filter.AuthorizationByRolesFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthorizationByRolesFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>
