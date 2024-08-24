@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--    <property name="connection.url"/>-->
+        <!--    <property name="connection.driver_class"/>-->
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <property name="hibernate.cache.use_query_cache">true</property>
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.jcache.JCacheRegionFactory</property>
+        <property name="hibernate.jakarta.cache.provider">org.ehcache.jsr.EhcacheCachingProvider</property>
+        <property name="hibernate.cache.jcache.configLocation">classpath:ehcache.xml</property>
+        <property name="hibernate.generate_statistics">true</property>
+        <property name="hibernate.envers.autoRegisterListeners=true">true</property>
+<!--        <property name="hibernate.hbm2ddl.auto">create</property>-->
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

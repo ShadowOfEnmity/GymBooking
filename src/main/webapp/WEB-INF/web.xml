@@ -5,12 +5,15 @@
          version="6.0">
 
     <listener>
-        <listener-class>ru.kostrikov.gym_booking.listener.HibernateContextListener</listener-class>
+        <listener-class>ru.kostrikov.gymbooking.listener.SessionFactoryProxy</listener-class>
+    </listener>
+    <listener>
+        <listener-class>ru.kostrikov.gymbooking.listener.ValidatorListener</listener-class>
     </listener>
 
     <filter>
         <filter-name>CharsetFilter</filter-name>
-        <filter-class>ru.kostrikov.gym_booking.Filter.CharsetFilter</filter-class>
+        <filter-class>ru.kostrikov.gymbooking.Filter.CharsetFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>CharsetFilter</filter-name>
@@ -19,7 +22,7 @@
 
     <filter>
         <filter-name>AuthorizationFilter</filter-name>
-        <filter-class>ru.kostrikov.gym_booking.Filter.AuthorizationFilter</filter-class>
+        <filter-class>ru.kostrikov.gymbooking.Filter.AuthorizationFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>AuthorizationFilter</filter-name>
@@ -28,7 +31,7 @@
 
     <filter>
         <filter-name>AuthorizationByRolesFilter</filter-name>
-        <filter-class>ru.kostrikov.gym_booking.Filter.AuthorizationByRolesFilter</filter-class>
+        <filter-class>ru.kostrikov.gymbooking.Filter.AuthorizationByRolesFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>AuthorizationByRolesFilter</filter-name>

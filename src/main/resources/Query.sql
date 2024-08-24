@@ -111,13 +111,13 @@ VALUES ('TRAINER', 'trainer2', 'password4', 'trainer2@example.com', 'Анна', 
 
 -- booking
 INSERT INTO public.booking (booking_date, payment_status, status, user_id)
-VALUES ('2024-03-01', 'paid', 'confirmed', 1);
+VALUES ('2024-03-01', 'PAID', 'CONFIRMED', 1);
 INSERT INTO public.booking (booking_date, payment_status, status, user_id)
-VALUES ('2024-03-08', 'pending', 'waiting', 1);
+VALUES ('2024-03-08', 'UNPAID', 'WAITING', 1);
 INSERT INTO public.booking (booking_date, payment_status, status, user_id)
-VALUES ('2024-03-15', 'paid', 'confirmed', 3);
+VALUES ('2024-03-15', 'PAID', 'CONFIRMED', 3);
 INSERT INTO public.booking (booking_date, payment_status, status, user_id)
-VALUES ('2024-03-22', 'pending', 'waiting', 3);
+VALUES ('2024-03-22', 'UNPAID', 'PENDING', 3);
 
 -- training_session
 INSERT INTO public.training_session (capacity, date, description, duration, price, start_time, type, gym_id, trainer_id)
